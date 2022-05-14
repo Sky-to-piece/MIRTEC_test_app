@@ -38,9 +38,10 @@ namespace Client
         void BTRequest_Click(object sender, RoutedEventArgs e){
 
             if ((bool)(RBAll.IsChecked == true)) {
-                MessageBox.Show("Показаны все результаты", null, MessageBoxButton.OK, MessageBoxImage.Error);
                 ServerConnection();
+                MessageBox.Show("Показаны все результаты", null, MessageBoxButton.OK, MessageBoxImage.Error);
             } else if ((bool)(RBOne.IsChecked == true && TBRecordNum.Text.Length > 0)) {
+                ServerConnection();
                 MessageBox.Show($"Показаны результаты по номеру записи {TBRecordNum.Text}", null, MessageBoxButton.OK, MessageBoxImage.Error);
             } else {
                 MessageBox.Show("вы ничего не выбрали", null, MessageBoxButton.OK, MessageBoxImage.Error);
